@@ -1,0 +1,141 @@
+* {
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.cabecera, header nav, header nav ul {
+    display: flex;
+}
+
+.cabecera {
+    align-items: center;
+    background-color: rgb(223, 195, 159);
+}
+
+.cabecera .titulos {
+    width: 75%;
+    text-align: center;
+}
+
+.cabecera .imagenPortada {
+    width: 20%;
+}
+
+header nav {
+    width: 100%;
+    background-color: brown;
+    justify-content: center;
+}
+
+header nav ul {
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+header nav ul li {
+    margin: 0;
+    width: 20%;
+    padding: 1%;
+}
+
+header nav ul li a {
+    color: white;
+    font-size: large;
+    text-decoration: none;
+}
+
+header nav ul li a i:hover {
+    text-decoration: underline;
+}
+
+.navResponsive {
+    padding: 10px;
+    background-color: brown;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    text-align: center;
+    border-radius: 100px;
+    display: none;
+    position: fixed;
+}
+
+.navResponsive i {
+    font-size: 45px;
+    color: white;
+    cursor: pointer;
+}
+
+.navResponsive i:hover {
+    color: rgb(155, 155, 155);
+}
+
+.tituloSection {
+    margin-left: 2%;
+}
+
+.abecedario {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-size: larger;
+    flex-wrap: wrap;
+    height: auto;
+}
+
+.letras {
+    border: 1px solid brown;
+    width: 3.5%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.letras:hover {
+    background-color: rgba(167, 69, 69, 0.527);
+}
+
+@media screen and (max-width:725px){
+    .cabecera .imagenPortada {
+        display: none;
+    }
+    .cabecera .titulos {
+        width: 100%;
+    }
+    .navResponsive {
+        display: block;
+    }
+    header nav, header nav ul {
+        display: block;
+        width: 200px;
+        padding: 1%;
+        margin: 0;
+        text-align: left;
+    }
+    header nav {
+        position: fixed;
+        right: 3%;
+        top: 11%;
+        display: none;
+    }
+    header nav ul li {
+        width: 100%;
+        margin: 2%;
+    }
+    .letras {
+        width: 7%;
+    }
+}
+
+@media screen and (max-width:400px){
+    .letras {
+        width: 12%;
+    }
+}
