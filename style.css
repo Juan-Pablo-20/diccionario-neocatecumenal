@@ -7,7 +7,7 @@ body {
     padding: 0;
 }
 
-.cabecera, header nav, header nav ul {
+.cabecera, header nav, header nav ul, .abecedario {
     display: flex;
 }
 
@@ -83,7 +83,6 @@ header nav ul li a i:hover {
 }
 
 .abecedario {
-    display: flex;
     width: 100%;
     justify-content: center;
     font-size: larger;
@@ -150,9 +149,10 @@ header nav ul li a i:hover {
 }
 
 .modal {
-    width: 100%;
-    max-width: 700px;
-    height: 500px;
+    width: auto;
+    min-width: 300px;
+    height: auto;
+    padding: 3%;
     position: fixed;
     top: 48%;
     left: 48%;
@@ -160,4 +160,69 @@ header nav ul li a i:hover {
     z-index: 100;
     background-color: white;
     display: none;
+}
+
+.salirModal {
+    width: 100px;
+    height: 40px;
+    color: brown;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 3%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.salirModal:hover {
+    background-color: rgba(165, 42, 42, 0.575);
+    color: white;
+}
+
+.salirModal i {
+    font-size: larger;
+}
+
+table {
+    width: auto;
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    align-self: center;
+}
+
+tbody {
+    width: auto;
+}
+
+.columna, .filaT {
+    width: auto;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom-right-radius: 5px;
+    text-align: center;
+    font-size: medium;
+    text-decoration: none;
+}
+
+.columna {
+    padding: 5px;
+}
+
+.columna a {
+    color: black;
+    text-decoration: none;
+}
+
+.columna:hover {
+    background-color: rgba(158, 80, 80, 0.507);
+}
+
+@media screen and (max-width:400px){
+    .columna {
+        font-size: small;
+        padding-bottom: 10px;
+    }
 }
