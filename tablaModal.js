@@ -93,11 +93,52 @@ $(document).ready(function () {
                 `<td class="columna"><a href="${((letrasArray[letraCuadro][i]).toLocaleLowerCase()).split(" ").join("")}.html">${letrasArray[letraCuadro][i]}</a></td>`
         }
     }
-});
 
-/**
- * tr filas
- * td columnas
- * th columnas de titulos
- * tbody cuerpo de
- */
+    const mostrarPalabras = () => {
+        for (let i = 0; i < letrasArray.length; i++) {
+            for (let j = 0; j < letrasArray[i].length; j++) {
+                try {
+                    lista.innerHTML += `<li><a href="${((letrasArray[i][j]).toLocaleLowerCase()).split(" ").join("")}.html">${letrasArray[i][j]}</a></li>`;
+                } catch (e) {
+                    console.warn("Error gramatical");
+                }
+            }
+        }
+    }
+
+    const entrada = document.querySelector(".entrada");
+    const lista = document.querySelector(".listaResult");
+    var palabra;
+
+    entrada.addEventListener("keyup", () => {
+        if (entrada.value != "") {
+            palabra = entrada.value;
+            filtrar(palabra);
+        } else {
+            while (lista.firstChild) {
+                lista.removeChild(lista.firstChild);
+            }
+            mostrarPalabras();
+        }
+    });
+
+    const filtrar = (pal) => {
+        while (lista.firstChild) {
+            lista.removeChild(lista.firstChild);
+        }
+        for (let i = 0; i < letrasArray.length; i++) {
+            for (let j = 0; j < letrasArray[i].length; j++) {
+                try {
+                    if (letrasArray[i][j].toLocaleLowerCase().includes(pal)) {
+                        $(".resultBusqueda h3").css("display", "block");
+                        lista.innerHTML += `<li><a href="${((letrasArray[i][j]).toLocaleLowerCase()).split(" ").join("")}.html">${letrasArray[i][j]}</a></li>`;
+                    }
+                } catch (e) {
+                    console.warn("Error gramatical");
+                }
+            }
+        }
+    }
+
+    mostrarPalabras();
+});

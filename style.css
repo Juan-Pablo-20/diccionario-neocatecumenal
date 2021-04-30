@@ -7,7 +7,7 @@ body {
     padding: 0;
 }
 
-.cabecera, header nav, header nav ul, .abecedario {
+.cabecera, header nav, header nav ul, .abecedario, .parte1, .parte2, .parte3 {
     display: flex;
 }
 
@@ -80,6 +80,7 @@ header nav ul li a i:hover {
 
 .tituloSection {
     margin-left: 2%;
+    padding-top: 3%;
 }
 
 .abecedario {
@@ -88,6 +89,7 @@ header nav ul li a i:hover {
     font-size: larger;
     flex-wrap: wrap;
     height: auto;
+    padding-bottom: 5%;
 }
 
 .letras {
@@ -225,4 +227,128 @@ tbody {
         font-size: small;
         padding-bottom: 10px;
     }
+}
+
+.busquedaSection {
+    background-color: rgb(223, 195, 159);
+}
+
+.busqueda {
+    display: flex;
+    padding: 3%;
+    background-color: brown;
+}
+
+.busqueda .elementos {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.busqueda .elementos label {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+}
+
+.entrada {
+    width: 100%;
+    max-width: 500px;
+    height: 30px;
+    outline: none;
+    margin-top: 10px;
+}
+
+.miniParrafo {
+    width: 300px;
+    color: white;
+    margin-left: 20%;
+}
+
+.resultBusqueda {
+    height: 300px;
+    border-bottom: 1px solid brown;
+    overflow-y: scroll;
+}
+
+.resultBusqueda h3 {
+    margin-left: 20px;
+    display: none;
+    text-align: center;
+}
+
+.listaResult {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.listaResult li {
+    margin: 0.5%;
+    list-style: none;
+    background-color: white;
+    padding: 1%;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+@media screen and (max-width:600px){
+    .listaResult{
+        padding: 0;
+    }
+    .listaResult li{
+        margin: 1.3%;
+    }
+    .resultBusqueda {
+        height: 200px;
+    }
+    .miniParrafo {
+        display: none;
+    }
+}
+
+.listaResult li a {
+    color: black;
+    text-decoration: none;
+}
+
+.listaResult li:hover {
+    color: white;
+    text-decoration: underline;
+    background-color: rgb(211, 104, 104);
+}
+
+.listaResult li a:hover {
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.parte1, .parte2, .parte3 {
+    width: 100%;
+    height: 300px;
+    background-color: rgb(223, 195, 159);
+    flex-wrap: wrap;
+}
+
+.tituloAside {
+    height: 100px;
+}
+
+.parte1 .tituloP1, .parte3 .tituloP3, 
+.parte1 .imgP1, .parte3 .imgP3, .parte2 .tituloP2, .parte2 .imgP2 {
+    width: 50%;
+}
+
+.tituloP1, .tituloP2, .tituloP3 {
+    text-align: center;
+    margin: auto;
+    font-size: x-large;
+}
+
+.imgP1, .imgP2, .imgP3{
+    /* background-image: url();
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; */
+    background-color: white;
 }
