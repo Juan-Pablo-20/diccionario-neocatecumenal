@@ -94,13 +94,30 @@ $(document).ready(function () {
         }
     }
 
+    const barra = document.querySelector(".barra");
+
     const mostrarPalabras = () => {
-        for (let i = 0; i < letrasArray.length; i++) {
-            for (let j = 0; j < letrasArray[i].length; j++) {
-                try {
-                    lista.innerHTML += `<li><a href="words/${((letrasArray[i][j]).toLocaleLowerCase()).split(" ").join("")}.html">${letrasArray[i][j]}</a></li>`;
-                } catch (e) {
-                    console.warn("Error gramatical");
+        if(barra.clientWidth > 725){
+            for (let i = 0; i < letrasArray.length; i++) {
+                for (let j = 0; j < letrasArray[i].length; j++) {
+                    try {
+                        lista.innerHTML += `<li><a href="words/${((letrasArray[i][j]).toLocaleLowerCase()).split(" ").join("")}.html">${letrasArray[i][j]}</a></li>`;
+                    } catch (e) {
+                        console.warn("Error gramatical");
+                    }
+                }
+            }
+        } else {
+            for (let i = 0; i < letrasArray.length; i++) {
+                for (let j = 0; j < letrasArray[i].length; j++) {
+                    try {
+                        lista.innerHTML += `<li><a href="words/${((letrasArray[i][j]).toLocaleLowerCase()).split(" ").join("")}.html">${letrasArray[i][j]}</a></li>`;
+                    } catch (e) {
+                        console.warn("Error gramatical");
+                    }
+                }
+                if(i == 0){
+                    break;
                 }
             }
         }

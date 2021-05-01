@@ -25,6 +25,27 @@ body {
     width: 20%;
 }
 
+.navResponsive {
+    width: 100%;
+    height: auto;
+    background-color: brown;
+    text-align: right;
+    padding-bottom: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+.navResponsive i {
+    color: white;
+    margin-right: 10px;
+    margin-top: 10px;
+    font-size: x-large;
+}
+
+.navResponsive i:hover {
+    color: rgb(155, 155, 155);
+}
+
 header nav {
     width: 100%;
     background-color: brown;
@@ -54,28 +75,8 @@ header nav ul li a {
 
 header nav ul li a i:hover {
     text-decoration: underline;
-}
+}   
 
-.navResponsive {
-    padding: 10px;
-    background-color: brown;
-    position: absolute;
-    top: 2%;
-    right: 2%;
-    text-align: center;
-    border-radius: 100px;
-    display: none;
-}
-
-.navResponsive i {
-    font-size: 45px;
-    color: white;
-    cursor: pointer;
-}
-
-.navResponsive i:hover {
-    color: rgb(155, 155, 155);
-}
 
 .tituloSection {
     margin-left: 2%;
@@ -116,12 +117,16 @@ header nav ul li a i:hover {
         margin: 0;
         text-align: left;
     }
+    .navResponsive {
+        display: block;
+    }
     header .barra {
         height: auto;
         width: 100%;
+        display: none;
     }
     header .barra ul li {
-        width: 50%;
+        width: 90%;
         margin: 2%;
         border-bottom: 1px solid white;
     }
@@ -152,7 +157,7 @@ header nav ul li a i:hover {
     width: auto;
     min-width: 300px;
     height: auto;
-    max-height: 500px;
+    max-height: 450px;
     overflow-y: scroll;
     padding: 3%;
     position: fixed;
@@ -224,7 +229,7 @@ tbody {
 
 @media screen and (max-width:400px){
     .columna {
-        font-size: small;
+        font-size: x-small;
         padding-bottom: 10px;
     }
 }
