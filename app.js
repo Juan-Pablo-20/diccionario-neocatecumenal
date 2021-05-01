@@ -8,10 +8,8 @@ $(document).ready(function () {
     const cabecera = document.querySelector(".cabecera");
     const barra = document.querySelector(".barra");
 
-    var pantalla = window.screen.availWidth;
-
     window.addEventListener("scroll", () => {
-        if(pantalla > 725){
+        if (barra.clientWidth > 725) {
             if (window.scrollY > cabecera.clientHeight) {
                 barra.style.backgroundColor = "rgba(165, 42, 42, 0.700)";
                 barra.style.position = "fixed";
@@ -19,10 +17,7 @@ $(document).ready(function () {
             } else {
                 barra.style.backgroundColor = "brown";
                 barra.style.position = "relative";
-                barra.style.top = "0";
-            }   
-        } else {
-            
+            }
         }
     })
 });
