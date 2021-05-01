@@ -90,7 +90,7 @@ $(document).ready(function () {
                 tabbody.innerHTML += `<tr class="filaT fila${numFila}"></tr>`;
             }
             document.querySelector(`.fila${numFila}`).innerHTML +=
-                `<td class="columna"><a href="${((letrasArray[letraCuadro][i]).toLocaleLowerCase()).split(" ").join("")}.html">${letrasArray[letraCuadro][i]}</a></td>`
+                `<td class="columna"><a href="words/${((letrasArray[letraCuadro][i]).toLocaleLowerCase()).split(" ").join("")}.html">${letrasArray[letraCuadro][i]}</a></td>`
         }
     }
 
@@ -98,7 +98,7 @@ $(document).ready(function () {
         for (let i = 0; i < letrasArray.length; i++) {
             for (let j = 0; j < letrasArray[i].length; j++) {
                 try {
-                    lista.innerHTML += `<li><a href="${((letrasArray[i][j]).toLocaleLowerCase()).split(" ").join("")}.html">${letrasArray[i][j]}</a></li>`;
+                    lista.innerHTML += `<li><a href="words/${((letrasArray[i][j]).toLocaleLowerCase()).split(" ").join("")}.html">${letrasArray[i][j]}</a></li>`;
                 } catch (e) {
                     console.warn("Error gramatical");
                 }
@@ -131,7 +131,7 @@ $(document).ready(function () {
                 try {
                     if (letrasArray[i][j].toLocaleLowerCase().includes(pal)) {
                         $(".resultBusqueda h3").css("display", "block");
-                        lista.innerHTML += `<li><a href="${((letrasArray[i][j]).toLocaleLowerCase()).split(" ").join("")}.html">${letrasArray[i][j]}</a></li>`;
+                        lista.innerHTML += `<li><a href="words/${((letrasArray[i][j]).toLocaleLowerCase()).split(" ").join("")}.html">${letrasArray[i][j]}</a></li>`;
                     }
                 } catch (e) {
                     console.warn("Error gramatical");
