@@ -50,6 +50,7 @@ header nav {
     width: 100%;
     background-color: brown;
     justify-content: center;
+    z-index: 100;
 }
 
 header nav ul {

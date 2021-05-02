@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(223, 195, 159);
+}
+
+.comentarios, .titulo {
+    width: 100%;
+    max-width: 1025px;
+    margin: auto;
+}
+.comentarios {
+    background-color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.titulo {
+    margin-top: 20px;
+    background-color: brown;
+    color: white;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.titulo h2, .titulo h5 {
+    margin-left: 10px;
+}
+
+.imagen {
+    width: 100%;
+    height: 350px;
+    background-image: url(https://1.bp.blogspot.com/-dvclNrCriJg/XPT5sK_7YfI/AAAAAAAAIzc/Y9FppjT6TOEOSkKhc-NZPXSQzyl3MBb9gCLcBGAs/s1600/LaPaloma.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+}
