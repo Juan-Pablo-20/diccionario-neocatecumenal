@@ -152,6 +152,7 @@ header nav ul li a i:hover {
     position: fixed;
     top: 0;
     display: none;
+    z-index: 100;
 }
 
 .modal {
@@ -165,7 +166,7 @@ header nav ul li a i:hover {
     top: 48%;
     left: 48%;
     transform: translate(-48%, -48%);
-    z-index: 100;
+    z-index: 110;
     background-color: white;
     display: none;
 }

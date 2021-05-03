@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(223, 195, 159);
+}
+
+.barra {
+    position: fixed;
+}
+
+.contenedor {
+    display: flex;
+    margin-top: 50px;
+}
+
+section {
+    width: 75%;
+    background-color: white;
+    margin: 2%;
+    margin-right: 0;
+}
+
+section article {
+    padding: 3%;
+    text-align: justify;
+}
+
+aside {
+    width: 300px;
+    margin: 2%;
+    margin-left: 0;
+    background-color: white;
+    border-left: 10px solid brown;
+}
+
+.tituloAside2 {
+    padding: 5%;
+    margin-top: 7%;
+    text-align: center;
+    border-bottom: 1px solid brown;
+}
+
+article p {
+    font-size: larger;
+}
+
+.lectura {
+    cursor: pointer;
+}
+
+.lectura:hover {
+    text-decoration: underline;
+}
+
+.imprimir {
+    background-color: white;
+    color: brown;
+    font-weight: bolder;
+    padding: 2%;
+    margin: 3%;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.imprimir:hover {
+    background-color: rgb(253, 198, 198);
+}
+
+.tituloWords {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tituloWords .twL, .tituloWords .twV  {
+    width: 50%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.tituloWords .twV {
+    border-left: 1px solid black;
+}
+
+.words {
+    padding: 3%;
+}
+
+.botones {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.botones .verde, .botones .rojo  {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.botones .verde {
+    border: 1px solid green;
+}
+
+.botones .rojo {
+    border: 1px solid red;
+}
+
+.botones .verde:hover {
+    background-color: rgba(0, 128, 0, 0.301);
+}
+
+.botones .rojo:hover {
+    background-color: rgba(255, 0, 0, 0.301);
+}
+
+.conteo {
+    margin-left: 60px;
+}
+
+@media print {
+    .barra {
+        display: none;
+    }
+    aside {
+        display: none;
+    }
+    footer {
+        display: none;
+    }
+    section {
+        width: 100%;
+        margin: 2%;
+    }
+    .contenedor{
+        margin: 0;
+    }
+}
