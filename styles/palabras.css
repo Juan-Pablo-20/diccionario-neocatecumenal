@@ -6,6 +6,7 @@ body {
 
 .barra {
     position: fixed;
+    top: 0;
 }
 
 .contenedor {
@@ -91,6 +92,7 @@ article p {
     display: flex;
     align-items: center;
     font-weight: bold;
+    margin-bottom: 15px;
 }
 
 .botones .verde, .botones .rojo  {
@@ -120,18 +122,15 @@ article p {
     background-color: rgba(255, 0, 0, 0.301);
 }
 
-.conteo {
-    margin-left: 60px;
+.lectBotn, .conteo {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media print {
-    .barra {
-        display: none;
-    }
-    aside {
-        display: none;
-    }
-    footer {
+    .barra, aside, footer {
         display: none;
     }
     section {
@@ -140,5 +139,18 @@ article p {
     }
     .contenedor{
         margin: 0;
+    }
+}
+
+@media screen and (max-width:850px){
+    .contenedor {
+        flex-wrap: wrap;
+    }
+    aside, section {
+        width: 100%;
+        margin: 1%;
+    }
+    .lectBotn {
+        border-right: 1px solid black;
     }
 }
