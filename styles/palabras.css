@@ -14,6 +14,11 @@ body {
     margin-top: 50px;
 }
 
+.contenedor .titulo {
+    font-size: xx-large;
+    color: brown;
+}
+
 section {
     width: 75%;
     background-color: white;
@@ -140,6 +145,13 @@ article p {
     .contenedor{
         margin: 0;
     }
+    .lectura {
+        font-weight: bold;
+    }
+}
+
+footer div p a:hover {
+    text-decoration: underline;
 }
 
 @media screen and (max-width:850px){
@@ -149,8 +161,5 @@ article p {
     aside, section {
         width: 100%;
         margin: 1%;
-    }
-    .lectBotn {
-        border-right: 1px solid black;
     }
 }

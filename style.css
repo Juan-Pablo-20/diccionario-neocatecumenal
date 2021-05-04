@@ -104,41 +104,6 @@ header nav ul li a i:hover {
     background-color: rgba(167, 69, 69, 0.527);
 }
 
-@media screen and (max-width:725px){
-    .cabecera .imagenPortada {
-        display: none;
-    }
-    .cabecera .titulos {
-        width: 100%;
-    }
-    header .barra .listaNav {
-        display: block;
-        padding-top: 1%;
-        padding-bottom: 1%;
-        margin: 0;
-        text-align: left;
-    }
-    .navResponsive {
-        display: block;
-    }
-    header .barra {
-        height: auto;
-        width: 100%;
-        display: none;
-    }
-    header .barra ul li {
-        width: 90%;
-        margin: 2%;
-        border-bottom: 1px solid white;
-    }
-    header .barra ul li:hover {
-        background-color:rgb(163, 80, 80);
-    }
-    .letras {
-        width: 7%;
-    }
-}
-
 @media screen and (max-width:400px){
     .letras {
         width: 12%;
@@ -322,11 +287,12 @@ tbody {
 }
 
 .info {
-    height: 300px;
-    background-image: url(https://1.bp.blogspot.com/-dvclNrCriJg/XPT5sK_7YfI/AAAAAAAAIzc/Y9FppjT6TOEOSkKhc-NZPXSQzyl3MBb9gCLcBGAs/s1600/LaPaloma.jpg);
-    background-repeat: repeat;
+    height: 570px;
+    background-image: url(img/templo.jpg);
+    background-repeat: repeat-y;
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .fondoInfo {
@@ -372,12 +338,88 @@ tbody {
     font-size: x-large;
 }
 
+.imgP1 {
+    background-image: url(img/biblia-abierta.png);
+}
+
+.imgP2 {
+    background-image: url(img/votar.png);
+}
+
+.imgP3 {
+    background-image: url(img/imprimir.png);
+}
+
 .imgP1, .imgP2, .imgP3{
-    /* background-image: url();
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover; */
+    background-size: contain;
     background-color: white;
+}
+
+@media screen and (max-width:725px){
+    .cabecera .imagenPortada {
+        display: none;
+    }
+    .cabecera .titulos {
+        width: 100%;
+    }
+    header .barra .listaNav {
+        display: block;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        margin: 0;
+        text-align: left;
+    }
+    .navResponsive {
+        display: block;
+    }
+    header .barra {
+        height: auto;
+        width: 100%;
+        display: none;
+    }
+    header .barra ul li {
+        width: 90%;
+        margin: 2%;
+        border-bottom: 1px solid white;
+    }
+    header .barra ul li:hover {
+        background-color:rgb(163, 80, 80);
+    }
+    .letras {
+        width: 7%;
+    }
+    .parte1 .tituloP1, .parte3 .tituloP3, 
+    .parte1 .imgP1, .parte3 .imgP3, .parte2 .tituloP2, .parte2 .imgP2 {
+        width: 100%;
+    }
+    .tituloP1 {
+        order: 1;
+    }
+    .imgP1 {
+        order: 2;
+    }
+    .tituloP2 {
+        order: 3;
+    }
+    .imgP2 {
+        order: 4;
+    }
+    .tituloP3 {
+        order: 5;
+    }
+    .imgP3 {
+        order: 6;
+    }
+    .tituloP1, .tituloP2, .tituloP3 {
+        text-align: center;
+        margin: 0;
+        font-size: large;
+    }
+    .imgP1, .imgP2, .imgP3{
+        height: 200px;
+    }
 }
 
 footer {
