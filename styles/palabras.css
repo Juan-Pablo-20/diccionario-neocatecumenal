@@ -9,6 +9,12 @@ body {
     top: 0;
 }
 
+@media screen and (max-width:725px){
+    .barra {
+        position: relative;
+    }
+}
+
 .contenedor {
     display: flex;
     margin-top: 50px;
