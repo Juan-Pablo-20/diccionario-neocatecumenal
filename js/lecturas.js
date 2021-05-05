@@ -15,23 +15,26 @@ var seleccionada = false;
 for (let i = 0; i < lecturas.length; i++) { //recorre la lista de elementos con la clase .lectura
     const lct = document.querySelector(`.le${i}`);
     lct.addEventListener("click", () => {//a cada uno se le asigna un evento
-        if (lct.classList.contains("si1")) {
+        if (lct.classList.contains("si1") && lct.style.fontWeight == "normal") {
+            lct.style.fontWeight = "bold";
+            document.querySelector(`.boton${i}`).style.display = "flex";
+        } else if (lct.classList.contains("si1") && lct.style.fontWeight == "bold") {
             lct.style.fontWeight = "normal";
-            lct.classList.remove("si1");
+            document.querySelector(`.boton${i}`).style.display = "none";
         } else {
             lct.classList.add("si1");
             lct.style.fontWeight = "bold";
             cuadro.innerHTML += `
-        <div class="botones boton${i}">
-           <div class="lectBotn">
-               <span>${lct.innerHTML}</span>
-               <div class="verde verde${i}"><i class="fas fa-arrow-up" style="color: green;"></i></div>
-               <div class="rojo rojo${i}"><i class="fas fa-arrow-down" style="color: red;"></i></div>
-           </div>
-           <div class="conteo">
-              <span class="conteo${i} cverde${i} crojo${i}">0</span>
-           </div>
-        </div>`;
+            <div class="botones boton${i}">
+               <div class="lectBotn">
+                   <span>${lct.innerHTML}</span>
+                   <div class="verde verde${i}"><i class="fas fa-arrow-up" style="color: green;"></i></div>
+                   <div class="rojo rojo${i}"><i class="fas fa-arrow-down" style="color: red;"></i></div>
+               </div>
+               <div class="conteo">
+                  <span class="conteo${i} cverde${i} crojo${i}">0</span>
+               </div>
+            </div>`;
             escogidas.push(i);//se añade el numero i al array escogidas
             existe = true;
             asignarVotos(existe);
