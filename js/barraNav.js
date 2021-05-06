@@ -40,6 +40,7 @@ $(document).ready(function () {
     const aside = document.querySelector(".asideC");
     const footer = document.querySelector(".footerC");
     const tituloAside = document.querySelector(".tituloAside2");
+    const navResponsive = document.querySelector(".navResponsive");
 
     var colorBtns = [azul, verde, naranja, lila, beige, brown];
     var clase;
@@ -58,6 +59,7 @@ $(document).ready(function () {
             aside.style.borderLeft = `10px solid ${colorB}`;
             tituloAside.style.borderBottom = `1px solid ${colorB}`;
             footer.style.backgroundColor = colorB;
+            navResponsive.style.backgroundColor = colorB;
             if(clase === 5){
                 document.body.style.backgroundColor = "rgb(223, 195, 159)";
                 footer.style.color = "white";
