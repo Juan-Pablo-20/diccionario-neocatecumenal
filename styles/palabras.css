@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: rgb(223, 195, 159);
+    
 }
 
 .barra {
@@ -23,6 +24,8 @@ body {
 .contenedor .titulo {
     font-size: xx-large;
     color: brown;
+    width: 100%;
+    word-wrap: break-word;
 }
 
 section {
@@ -159,6 +162,91 @@ article p {
 footer div p a:hover {
     text-decoration: underline;
 }
+
+/* footer div {
+    border: 1px solid white;
+} */
+
+
+.textoFooter {
+    width: 25%;
+}
+
+.colores {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+@media screen and (max-width:790px){
+    .colores{
+        width: 100%;
+        padding-bottom: 3%;
+    }
+}
+
+.colores h3 {
+    width: 100%;
+}
+
+.cuadros {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.cuadros .azulC, .cuadros .verdeC, .cuadros .naranjaC, .cuadros .lilaC, .cuadros .beigeC, .cuadros .brownC {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+@media screen and (max-width:385px){
+    .cuadros .azulC, .cuadros .verdeC, .cuadros .naranjaC, .cuadros .lilaC, .cuadros .beigeC, .cuadros .brownC {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+.azulC {
+    background-color: aquamarine;
+}
+.verdeC {
+    background-color: lightgreen;
+}
+.naranjaC {
+    background-color: sandybrown;
+}
+.lilaC {
+    background-color: plum;
+}
+.beigeC {
+    background-color: bisque;
+}
+.brownC {
+    background-color: brown;
+}
+
+/* .azulC:hover {
+    background-color: aquamarine;
+}
+.verdeC:hover {
+    background-color: lightgreen;
+}
+.naranjaC:hover {
+    background-color: sandybrown;
+}
+.lilaC:hover {
+    background-color: plum;
+}
+.beigeC:hover {
+    background-color: lightgoldenrodyellow;
+} */
 
 @media screen and (max-width:850px){
     .contenedor {
