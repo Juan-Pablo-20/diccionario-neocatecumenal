@@ -234,22 +234,6 @@ footer div p a:hover {
     background-color: brown;
 }
 
-/* .azulC:hover {
-    background-color: aquamarine;
-}
-.verdeC:hover {
-    background-color: lightgreen;
-}
-.naranjaC:hover {
-    background-color: sandybrown;
-}
-.lilaC:hover {
-    background-color: plum;
-}
-.beigeC:hover {
-    background-color: lightgoldenrodyellow;
-} */
-
 @media screen and (max-width:850px){
     .contenedor {
         flex-wrap: wrap;
