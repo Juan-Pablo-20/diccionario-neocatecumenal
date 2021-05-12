@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $(".navResponsive").click(() => {
         $("header .barra").slideToggle();
-    })
+    });
 
     document.querySelector(".fondoModal").style.height = window.screen.height + "px";
 
@@ -11,11 +11,11 @@ $(document).ready(function () {
     window.addEventListener("scroll", () => {
         if (barra.clientWidth > 725) {
             if (window.scrollY > cabecera.clientHeight) {
-                barra.style.backgroundColor = "rgba(165, 42, 42, 0.700)";
+                barra.style.animation = "colorNav1 1s both";
                 barra.style.position = "fixed";
                 barra.style.top = "0";
             } else {
-                barra.style.backgroundColor = "brown";
+                barra.style.animation = "colorNav2 1s both";
                 barra.style.position = "relative";
             }
         }

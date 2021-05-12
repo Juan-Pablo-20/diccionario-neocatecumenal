@@ -43,16 +43,17 @@
                 </li>
             </ul>
         </nav>
-        <div class="imagen"></div>
+        <div class="imagen" style="top: 100px;"></div>
         <div class="titulo">
-            <h2>Deja tus comentarios aqui:</h2>
+            <h2>Deja tus comentarios o sugerencias aquí:</h2>
             <h5>(No olvides iniciar sesión en Facebook antes de comentar)</h5>
         </div>
     </header>
     <section>
         <div class="comentarios">
-            <div class="fb-comments" data-href="https://juan-pablo-20.github.io/diccionario-neocatecumenal/links/commets.html"
-            data-width="100%" data-numposts="15"></div>
+            <div class="fb-comments"
+                data-href="https://juan-pablo-20.github.io/diccionario-neocatecumenal/links/commets.html"
+                data-width="100%" data-numposts="15"></div>
         </div>
     </section>
     <footer>
@@ -60,8 +61,26 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="app.js"></script>
-    <script src="../js/barraNav.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".navResponsive").click(() => {
+                $("header .barra").slideToggle();
+            });
+            
+            const barra = document.querySelector(".barra");
+            window.addEventListener("scroll", () => {
+                if (barra.clientWidth > 725) {
+                    if (window.scrollY > 1) {
+                        barra.style.animation = "colorNav1 1s both";
+                        barra.style.position = "fixed";
+                        barra.style.top = "0";
+                    } else {
+                        barra.style.animation = "colorNav2 1s both";
+                    }
+                }
+            })
+        });
+    </script>
 </body>
 
 </html>
