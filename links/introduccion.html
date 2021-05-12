@@ -33,13 +33,13 @@
                             class="fas fa-book"> Acerca del libro</i></a>
                 </li>
                 <li>
-                    <a href="../index.html"><i class="fas fa-address-book"> Contáctanos</i></a>
+                    <a href="../index.html#contacto"><i class="fas fa-address-book"> Contacto</i></a>
                 </li>
                 <li>
                     <a href="../links/comments.html"><i class="fas fa-comment"> Comentarios</i></a>
                 </li>
                 <li>
-                    <a href="../index.html"><i class="fas fa-search"> Buscar</i></a>
+                    <a href="../index.html#buscar"><i class="fas fa-search"> Buscar</i></a>
                 </li>
             </ul>
         </nav>
@@ -1105,8 +1105,14 @@
             <p><a href="../links/comments.html">Deja tus comentarios</a></p>
         </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
-        const barra = document.querySelector(".barra");
+    $(document).ready(function () {
+        $(".navResponsive").click(() => {
+        $("header .barra").slideToggle();
+    })
+    const barra = document.querySelector(".barra");
         window.addEventListener("scroll", () => {
         if (barra.clientWidth > 725) {
             if (window.scrollY > 2) {
@@ -1117,6 +1123,9 @@
             }
         }
     });
+});
+
+        
     </script>
 </body>
 
