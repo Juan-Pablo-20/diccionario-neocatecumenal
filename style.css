@@ -332,6 +332,7 @@ tbody {
     width: 100%;
     height: 300px;
     background-color: rgb(223, 195, 159);
+    display: flex;
     flex-wrap: wrap;
 }
 
@@ -353,6 +354,11 @@ tbody {
     text-align: center;
     margin: auto;
     font-size: x-large;
+}
+
+.titulo3 h3 {
+    margin: 0;
+    position: relative;
 }
 
 .imgP1 {
@@ -433,6 +439,9 @@ tbody {
     }
     .imgP1, .imgP2, .imgP3{
         height: 200px;
+    }
+    .parte1, .parte2, .parte3 {
+        height: auto;
     }
 }
 
