@@ -7,6 +7,7 @@ $(document).ready(function () {
 
     const cabecera = document.querySelector(".cabecera");
     const barra = document.querySelector(".barra");
+    const info = document.querySelector(".info");
 
     window.addEventListener("scroll", () => {
         if (barra.clientWidth > 725) {
@@ -19,5 +20,9 @@ $(document).ready(function () {
                 barra.style.position = "relative";
             }
         }
-    })
+        if (scrollY > 1){
+            cabecera.style.backgroundPosition = `${-scrollY}px`;
+        }
+    });
+
 });

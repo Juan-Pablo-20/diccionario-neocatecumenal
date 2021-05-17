@@ -11,18 +11,34 @@ body {
     display: flex;
 }
 
+.fondoBlanco {
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    background-color: rgba(44, 44, 44, 0.479);
+    z-index: 10;
+}
+
 .cabecera {
+    width: 100%;
+    height: 400px;
     align-items: center;
-    background-color: rgb(223, 195, 159);
+    background-image: url(img/pintura.jpg);
+    background-repeat: repeat-x;
+    background-size: cover;
+    background-position: center;
 }
 
 .cabecera .titulos {
     width: 75%;
     text-align: center;
+    z-index: 50;
+    color: white;
 }
 
 .cabecera .imagenPortada {
     width: 20%;
+    z-index: 50;
 }
 
 .navResponsive {
@@ -33,6 +49,7 @@ body {
     padding-bottom: 10px;
     cursor: pointer;
     display: none;
+    z-index: 90;
 }
 
 .navResponsive i {
@@ -306,10 +323,10 @@ tbody {
 .info {
     height: 570px;
     background-image: url(img/templo.jpg);
-    background-repeat: repeat-y;
-    background-position: center;
+    background-repeat: repeat-x;
     background-size: cover;
     background-attachment: fixed;
+    background-position: center;
 }
 
 .fondoInfo {
